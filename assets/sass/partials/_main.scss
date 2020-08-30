@@ -1,0 +1,63 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: $secondary;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+}
+
+h2 {
+    color: $h2-color;
+    font-family: $font-open;
+    font-size: 1.6em;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.col-sm {
+    background-color: $primary;
+    border-radius: 5%;
+    margin: 0 15px 30px;
+    max-width: 260px;
+    min-height: 260px;
+    padding: 0;
+
+    @media(min-width: 576px){
+        min-height: 105px;
+    }
+
+    @media(min-width: 768px){
+        min-height: 150px;
+    }
+
+    @media(min-width: 992px){
+        min-height: 210px;
+    }
+
+    @media(min-width: 1200px){
+        min-height: 255px;
+    }
+}
+
+.row {
+    margin-bottom: 0px;
+    justify-content: center;
+
+    &__item--out-of-stock {
+        background-color: white;
+        border: 3px solid $pink;
+    }
+
+    &__item--sold-out {
+        background-color: $pink;
+        border: 3px solid white;
+    }
+}
+
+.wrapper {
+    flex: 1 0 auto;
+}

@@ -1,0 +1,117 @@
+header,
+footer {
+    background-color: $primary;
+}
+
+nav,
+.footer-content {
+    margin: 0 auto;
+    padding: 0 !important;
+    width: 95%;
+}
+
+.navbar-brand {
+    color: $text-color;
+}
+
+.navbar-text-styles {
+    letter-spacing: 0.4px;
+}
+
+.navbar__brand {
+
+    &--color {
+        @extend .navbar-text-styles;
+        color: #262626;
+        font-family: $font-open;
+        font-size: 0.7em;
+        margin-left: 1rem;
+    }
+
+    &--transform {
+        @extend .navbar-text-styles;
+        font-family: $font-narrow;
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+
+    &--active {
+        color: $pink;
+    }
+}
+
+.navbar__list {
+    margin: auto 0;
+}
+
+footer{
+    flex-shrink: 0;
+}
+
+.footer-content__items {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media(min-width: 576px){
+        flex-direction: row;
+    }
+
+    &__p {
+        color: $text-color;
+        font-family: $font-open;
+        font-size: 0.75em;
+        margin: 0;
+        padding: 15px;
+    }
+}
+
+.navbar {
+
+    &__desktop {
+        display: none;
+        
+        @media(min-width: 576px) {
+            display: flex;
+        }
+    }
+
+    &__phone {
+        display: flex;
+
+        @media(min-width: 576px) {
+            display: none;
+        }
+    }
+}
+
+img {
+    display: flex;
+    width: 30px;
+}
+
+.dropdown__content {
+    display: block;
+    background-color: $primary;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    top: 59px;
+    width: 100%;
+    padding: 30px;
+    z-index: 2;
+
+    a {
+        display: block;
+        margin: 15px auto;
+    }
+
+    &--show {
+        display: none;
+    }
+}
+
+.myShadow {
+    box-shadow: 0 0.8rem 1rem rgba(0,0,0,.15)!important
+}
